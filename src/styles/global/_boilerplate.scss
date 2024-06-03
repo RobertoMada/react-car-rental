@@ -7,11 +7,38 @@
   margin: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  line-height: 1.5;
   background-color: $bg-white;
   font-family: $text-font;
   font-size: 1rem;

@@ -1,15 +1,16 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 import Footer from "./Footer";
 
 const Layout = () => {
+  let { pathname } = useLocation();
   return (
     <>
       <Navbar />
       <Outlet />
-      <Banner />
+      {pathname !== "/" ? <Banner /> : null}
       <Footer />
     </>
   );

@@ -24,15 +24,6 @@ select {
   font: inherit;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -40,7 +31,7 @@ html {
 body {
   line-height: 1.5;
   background-color: $bg-white;
-  font-family: $text-font;
+  font-family: $title-font;
   font-size: 1rem;
 }
 

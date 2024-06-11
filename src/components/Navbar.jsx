@@ -10,44 +10,42 @@ const Navbar = () => {
     <>
       <nav>
         {/* Desktop navigation */}
-        <div className="container">
-          <div className="navbar">
-            <div className="navbar__img">
-              <Link to="/">
-                <img src={Logo} alt="car rental logo" />
-              </Link>
-            </div>
-            <ul className="navbar__links">
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="models">Vehicle Models</NavLink>
-              </li>
-              <li>
-                <NavLink to="testimonials">Testimonials</NavLink>
-              </li>
-              <li>
-                <NavLink to="our-team">Our Team</NavLink>
-              </li>
-              <li>
-                <NavLink to="contact">Contact</NavLink>
-              </li>
-            </ul>
-            <div className="navbar__buttons">
-              <button className="navbar__buttons__sign-in">Sign In</button>
-              <button className="navbar__buttons__register">Register</button>
-            </div>
-            <div className="mobile-hamburger">
-              <IconMenu2
-                width={30}
-                height={30}
-                onClick={() => setOpennav(true)}
-              />
-            </div>
+        <div className="navbar">
+          <div className="navbar__img">
+            <Link to="/">
+              <img src={Logo} alt="car rental logo" />
+            </Link>
+          </div>
+          <ul className="navbar__links">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="models">Vehicle Models</NavLink>
+            </li>
+            <li>
+              <NavLink to="testimonials">Testimonials</NavLink>
+            </li>
+            <li>
+              <NavLink to="our-team">Our Team</NavLink>
+            </li>
+            <li>
+              <NavLink to="contact">Contact</NavLink>
+            </li>
+          </ul>
+          <div className="navbar__buttons">
+            <button className="navbar__buttons__sign-in">Sign In</button>
+            <button className="navbar__buttons__register">Register</button>
+          </div>
+          <div className="mobile-hamburger">
+            <IconMenu2
+              width={30}
+              height={30}
+              onClick={() => setOpennav(true)}
+            />
           </div>
         </div>
         {/* Mobile navigation */}

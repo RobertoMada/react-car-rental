@@ -4,6 +4,8 @@ import {
   IconMapPinFilled,
   IconCalendarEvent,
 } from "@tabler/icons-react";
+import BookModal from "./BookModal";
+import { cars } from "../images/cars-big/car-assets";
 
 const BookCar = () => {
   const [bookDetails, setBookDetails] = useState({
@@ -14,8 +16,37 @@ const BookCar = () => {
     dropTime: "",
   });
 
+  let imgUrl;
+  switch (bookDetails.carType) {
+    case "Audi A1 S-Line":
+      imgUrl = cars.CarAudi;
+      break;
+    case "VW Golf 6":
+      imgUrl = cars.CarGolf;
+      break;
+    case "Toyota Camry":
+      imgUrl = cars.CarToyota;
+      break;
+    case "BMW 320 ModernLine":
+      imgUrl = cars.CarBMW;
+      break;
+    case "Mercedes-Benz GLK":
+      imgUrl = cars.CarMercedes;
+      break;
+    case "VW Passat CC":
+      imgUrl = cars.CarPassat;
+      break;
+    default:
+      imgUrl = "";
+  }
+
   const [error, setError] = useState(false);
-  const [succes, setSucces] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const closeModal = () => {
+    setModal(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,11 +54,13 @@ const BookCar = () => {
       setError(true);
     } else {
       setError(false);
+      setModal(true);
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setSuccess(false);
     setBookDetails((prev) => {
       return {
         ...prev,
@@ -39,10 +72,25 @@ const BookCar = () => {
   return (
     <section className="book-section">
       <div className="container">
+        {modal && (
+          <BookModal
+            image={imgUrl}
+            {...bookDetails}
+            closeModal={closeModal}
+            OnSuccess={() => {
+              setModal(false);
+              setSuccess(true);
+            }}
+          />
+        )}
         <div className="book-content">
           <h2>Book a car</h2>
-          <p className={error ? "book-content__error" : ""}>Error Message</p>
-          <p className={succes ? "book-content__succes" : ""}>Succes Message</p>
+          <p className={error && "book-content__error"}>
+            All fields are required!
+          </p>
+          <p className={success && "book-content__succes"}>
+            Check your email to confirm the order.
+          </p>
           <form className="box-form" onSubmit={handleSubmit}>
             <div className="box-form__car-details">
               <label htmlFor="carType">
@@ -78,12 +126,12 @@ const BookCar = () => {
                 onChange={handleChange}
               >
                 <option value="">Select pick up location</option>
-                <option value="suceava">Suceava</option>
-                <option value="iasi">Iasi</option>
-                <option value="cluj-napoca">Cluj-Napoca</option>
-                <option value="bucuresti">Bucuresti</option>
-                <option value="timisoara">Timisoara</option>
-                <option value="constanta">Constanta</option>
+                <option value="Suceava">Suceava</option>
+                <option value="Iasi">Iasi</option>
+                <option value="Cluj-Napoca">Cluj-Napoca</option>
+                <option value="Bucuresti">Bucuresti</option>
+                <option value="Timisoara">Timisoara</option>
+                <option value="Constanta">Constanta</option>
               </select>
             </div>
             <div className="box-form__car-details">
@@ -99,12 +147,12 @@ const BookCar = () => {
                 onChange={handleChange}
               >
                 <option value="">Select drop off location</option>
-                <option value="suceava">Suceava</option>
-                <option value="iasi">Iasi</option>
-                <option value="cluj-napoca">Cluj-Napoca</option>
-                <option value="bucuresti">Bucuresti</option>
-                <option value="timisoara">Timisoara</option>
-                <option value="constanta">Constanta</option>
+                <option value="Suceava">Suceava</option>
+                <option value="Iasi">Iasi</option>
+                <option value="Cluj-Napoca">Cluj-Napoca</option>
+                <option value="Bucuresti">Bucuresti</option>
+                <option value="Timisoara">Timisoara</option>
+                <option value="Constanta">Constanta</option>
               </select>
             </div>
             <div className="box-form__car-time">

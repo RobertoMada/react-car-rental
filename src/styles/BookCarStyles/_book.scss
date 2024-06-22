@@ -1,5 +1,9 @@
 @use "../global/" as *;
 
+.modal-active {
+  display: block !important;
+}
+
 .book-section {
   background: linear-gradient(180deg, #f8f8f8 20%, #fff 80%);
 }

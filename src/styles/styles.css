@@ -683,4 +683,50 @@ body {
 }
 .booking-modal__personal-info__form button:hover {
   box-shadow: 0 10px 15px rgba(255, 83, 48, 0.35);
+}
+
+.plan-section {
+  background-color: #ffffff;
+  margin-top: 6rem;
+}
+
+.plan-content__title {
+  text-align: center;
+}
+.plan-content__title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.plan-content__title h2 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.plan-content__cards {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .plan-content__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .plan-content__cards {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    gap: 0;
+  }
+}
+.plan-content__cards__content {
+  text-align: center;
+  padding: 1rem clamp(2rem, 4vw, 5rem);
+}
+.plan-content__cards__content img {
+  width: 170px;
+}
+.plan-content__cards__content h3 {
+  font-size: 1.5rem;
+  white-space: nowrap;
 }/*# sourceMappingURL=styles.css.map */

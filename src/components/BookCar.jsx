@@ -85,10 +85,10 @@ const BookCar = () => {
         )}
         <div className="book-content">
           <h2>Book a car</h2>
-          <p className={error && "book-content__error"}>
+          <p className={error ? "book-content__error" : ""}>
             All fields are required!
           </p>
-          <p className={success && "book-content__succes"}>
+          <p className={success ? "book-content__succes" : ""}>
             Check your email to confirm the order.
           </p>
           <form className="box-form" onSubmit={handleSubmit}>

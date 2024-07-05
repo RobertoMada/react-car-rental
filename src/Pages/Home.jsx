@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import BookCar from "../components/BookCar";
 import PlanTrip from "../components/PlanTrip";
 import PickCar from "../components/PickCar";
+import HomeBanner from "../components/HomeBanner";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <BookCar />
       <PlanTrip />
       <PickCar />
+      <HomeBanner />
     </>
   );
 };

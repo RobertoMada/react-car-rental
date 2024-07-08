@@ -942,4 +942,102 @@ body {
 .banner-description p span {
   color: #ff4d30;
   font-weight: 500;
+}
+
+.choose-section {
+  margin-top: 6rem;
+  background: url("src/images/chooseUs/bg.png") no-repeat;
+  background-position: 0 255px;
+  background-size: contain;
+}
+
+.choose-container__img {
+  text-align: center;
+}
+.choose-container__img img {
+  width: 90%;
+}
+.choose-container__text {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 900px) {
+  .choose-container__text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+.choose-container__text__left {
+  max-width: 50ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (max-width: 1100px) {
+  .choose-container__text__left {
+    max-width: 40ch;
+  }
+}
+.choose-container__text__left h3 {
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+}
+.choose-container__text__left h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.choose-container__text__left p {
+  color: #706f7b;
+  font-family: "Rubik", sans-serif;
+}
+.choose-container__text__left button {
+  border: none;
+  background-color: #ff4d30;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  transition: box-shadow 0.3s;
+}
+.choose-container__text__left button:hover {
+  box-shadow: 0 10px 15px rgba(255, 83, 48, 0.35);
+}
+@media (max-width: 900px) {
+  .choose-container__text__left button {
+    align-self: stretch;
+  }
+}
+.choose-container__text__right {
+  max-width: 50ch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (max-width: 1100px) {
+  .choose-container__text__right {
+    max-width: 40ch;
+  }
+}
+.choose-container__text__right__box {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .choose-container__text__right__box {
+    flex-direction: column;
+  }
+}
+.choose-container__text__right__box h4 {
+  font-size: 1.5rem;
+}
+.choose-container__text__right__box p {
+  color: #706f7b;
+  font-family: "Rubik", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

@@ -4,7 +4,6 @@ import CarBox from "./CarBox";
 
 const PickCar = () => {
   const [selectedCar, setSelectedCar] = useState(0);
-  console.log(selectedCar);
   return (
     <section className="pick-section">
       <div className="container">

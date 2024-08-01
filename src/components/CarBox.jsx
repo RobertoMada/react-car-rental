@@ -1,7 +1,6 @@
 import React from "react";
 
 const CarBox = ({ data }) => {
-  console.log(data);
   return (
     <>
       <div className="car-box__image">

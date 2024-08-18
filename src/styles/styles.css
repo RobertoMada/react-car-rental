@@ -1129,4 +1129,70 @@ body {
 .slick-next::before {
   font-size: 30px;
   color: #ff4d30;
+}
+
+.faq-section {
+  margin-top: 3rem;
+  background: url(/src/images/faq/car.png) left no-repeat;
+  padding-block: 2rem 4rem;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.faq-content__title {
+  margin-inline: auto;
+  text-align: center;
+  max-width: 60ch;
+}
+.faq-content__title h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+}
+.faq-content__title h2 {
+  font-size: 2.5rem;
+}
+.faq-content__title p {
+  font-family: "Rubik", sans-serif;
+  color: #706f7b;
+}
+.faq-content__questions-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq-content__questions-box__question {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 2rem;
+  max-width: 50rem;
+}
+.faq-content__questions-box__question > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-content__questions-box__question > div h4 {
+  font-size: 1.25rem;
+}
+.faq-content__questions-box__question p {
+  font-family: "Rubik", sans-serif;
+  color: #706f7b;
+}
+
+.close-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.active-answer {
+  opacity: 1;
+  max-height: 100vh;
+  transition: all 1s;
+  padding-top: 1rem;
 }/*# sourceMappingURL=styles.css.map */
